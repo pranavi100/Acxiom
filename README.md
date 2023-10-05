@@ -36,7 +36,7 @@
 
     <div id="welcomePage" class="container">
         <h2>Welcome to the Reminder Application <span id="loggedInUsername"></span></h2>
-        <p>Today is <span id="currentDate"></span></p>
+        <p>Today is Tuesday,14th of February</p>
         <ul>
             <li>Set Reminder</li>
             <li>Modify Reminder</li>
@@ -87,8 +87,8 @@
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            const username = "viha";
-            const password = "viha@123";
+            const username = "Text box";
+            const password = "Textbox";
             const enteredUsername = document.getElementById("username").value;
             const enteredPassword = document.getElementById("password").value;
             
@@ -97,15 +97,6 @@
                 document.getElementById("loginPage").style.display = "none";
                 document.getElementById("welcomePage").style.display = "block";
                 document.getElementById("loggedInUsername").textContent = username;
-                
-                // Display current date
-                const currentDate = new Date().toLocaleDateString(undefined, {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                document.getElementById("currentDate").textContent = currentDate;
             } else {
                 alert("Invalid username or password. Please try again.");
             }
